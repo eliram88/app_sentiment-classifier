@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 # بارگذاری مدل
-model = joblib.load('app/xgb_sentiment_model.pkl')
+model = joblib.load('xgb_sentiment_model.pkl')
 
 st.set_page_config(page_title="App Review Sentiment Predictor", layout="centered")
 
