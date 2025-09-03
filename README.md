@@ -2,14 +2,13 @@
 
 # App Sentiment Classifier
 
-🎯 هدف پروژه: پیش‌بینی احساس کاربران نسبت به اپ‌های پلی‌استور (مثبت یا منفی) با تحلیل ویژگی‌های اپ
+🎯 Project goal: Predict user sentiment (positive or negative) toward Google Play Store apps by analyzing app features and user reviews
 
-دیتاست: https://www.datacamp.com/datalab/datasets/dataset-python-google-play-store-apps
+Dataset: https://www.datacamp.com/datalab/datasets/dataset-python-google-play-store-apps
+Result: https://appclassifier.streamlit.app/
 
-خروجی: https://appclassifier.streamlit.app/
 
-
-## 🔧 ابزارهای استفاده‌شده
+## 🔧 Tools & Libraries
 
 - Python (Pandas, Scikit-learn, Streamlit, XGBoost)
 - Excel
@@ -17,71 +16,76 @@
 - GitHub for version control
 
 
-## 📊 مراحل پروژه
+## 📊 📊 Project Workflow
 
-1. **پیش‌پردازش و پاک‌سازی داده‌ها**
-2. **تحلیل آماری و بصری**
-3. **مهندسی ویژگی‌ها (Feature Engineering)**
-4. **مدل‌سازی با XGBoost و Ranfom Forest**
-5. **تحلیل دقیق با SHAP برای تفسیر مدل**
-6. **داشبورد تعاملی با Streamlit**
-7. **آماده‌سازی برای انتشار در GitHub و Streamlit Cloud**
-
-
-## 🚀 خروجی‌ها
-
-- 🌐 اپ Streamlit (`app/app_sentiment.py`)
-- 📋 تحلیل عددی، مهندسی ویژگی و بررسی مدل (Jupyter Notebook)
+1. **Data Preprocessing & Cleaning**
+2. **Statistical & Visual Analysis**
+3. **Feature Engineering**
+4. **Modeling with XGBoost and Random Forest**
+5. **Model Interpretation with SHAP**
+6. **Interactive Dashboard with Streamlit**
+7. **Deployment on GitHub & Streamlit Cloud**
 
 
-## 🌐 لینک پروژه در گیت هاب
+## 🚀 Outputs
 
-[مشاهده پروژه در GitHub](https://github.com/eliram88/app_sentiment-classifier)
-
-
-## 💡 ویژگی‌های کلیدی
-
-✅ قابلیت پیش‌بینی احساس کاربران نسبت به اپ‌ها  
-✅ تحلیل دقیق دلیل تصمیم‌گیری مدل با استفاده از SHAP  
-✅ داشبورد کاملاً تعاملی برای استفاده توسط کاربران غیرتکنیکی  
+- 🌐 Streamlit App → app/app_sentiment.py
+- 📋 Data Analysis & Modeling → Jupyter Notebook
 
 
-## 🎯 برای اجرای اپ Streamlit:
+## 🌐 Project Link in GitHub
+
+[View project in GitHub](https://github.com/eliram88/app_sentiment-classifier)
+
+
+## 💡 Key Features
+
+✅ Predicting user sentiment toward mobile applications
+✅ Explainable ML decisions using SHAP values
+✅ Fully interactive dashboard for non-technical users
+
+
+
+## 🎯 Run the Streamlit App
 
 ```bash
 pip install -r app/requirements.txt
 streamlit run app/app_sentiment.py
  ```
 
-### 🌐 اجرای اپ آنلاین در Streamlit Cloud:
-https://appclassifier.streamlit.app/
+### 🌐 Online App
+
+[Streamlit Cloud Deployment](https://appclassifier.streamlit.app/)  
 
 
-## 📁 ساختار فایل‌ها
+
+## 📁 Project Structure
 ```bash
 app_sentiment_classifier/
 │
 ├── 📁 data/
-│   └── googleplaystore.csv                # دیتای اصلی
-│   └── googleplaystore_user_reviews.csv   
+│   └── googleplaystore.csv                # Main dataset
+│   └── googleplaystore_user_reviews.csv   # User reviews
 │
 ├── 📁 notebook/
-│   └── APPclassifier.ipynb                # تحلیل داده و مدل‌سازی (Jupyter Notebook)
+│   └── APPclassifier.ipynb                # Data analysis & modeling
 │
 ├── 📁 app/
-│   └── app_sentiment.py                 # اپ Streamlit
-│   └── requirements.txt                 # لیست کتابخانه‌ها
-│   └── xgb_sentiment_model.pkl          # مدل ذخیره‌شده
+│   └── app_sentiment.py                 # Streamlit app
+│   └── requirements.txt                 # Dependencies 
+│   └── xgb_sentiment_model.pkl          # Trained ML model
 │
 ├── 📁 dashboard/
-│   └── dashboard-screenshot.png         # تصویر داشبورد نهایی streamlit
+│   └── dashboard-screenshot.png         # Dashboard screenshot
 │
-├── 📄 README.md                         # توضیح پروژه (همین فایل)
+├── 📄 README.md                         # Project documentation
 ```
 
-## 🧑‍💻 توسعه‌دهنده
 
-این پروژه توسط یک علاقه‌مند به تحلیل داده و یادگیری ماشین طراحی و اجرا شده  
-با هدف شرکت در موقعیت های "تحلیلگر داده / دیتا ساینتیست".
+## 👨‍💻 Developer
 
-✨ هدف: توسعه نمونه کار قابل ارائه، تمرین تحلیل واقعی، یادگیری مدل‌سازی حرفه‌ای و تفسیر مدل
+This project was developed by a data analysis and machine learning enthusiast with the goal of:
+
+- Building a professional portfolio project
+- Practicing real-world data analysis & modeling
+- Deploying ML models in interactive apps
