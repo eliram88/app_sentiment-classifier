@@ -4,7 +4,7 @@
 
 🎯 Project goal: Predict user sentiment (positive or negative) toward Google Play Store apps by analyzing app features and user reviews
 
-Dataset: https://www.datacamp.com/datalab/datasets/dataset-python-google-play-store-apps
+Dataset: https://www.datacamp.com/datalab/datasets/dataset-python-google-play-store-apps  
 Result: https://appclassifier.streamlit.app/
 
 
@@ -89,3 +89,4 @@ This project was developed by a data analysis and machine learning enthusiast wi
 - Building a professional portfolio project
 - Practicing real-world data analysis & modeling
 - Deploying ML models in interactive apps
+
