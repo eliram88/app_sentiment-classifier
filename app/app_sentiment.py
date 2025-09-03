@@ -47,4 +47,4 @@ if st.button("Predict Sentiment"):
     if prediction[0] == 1:
         st.success("✅ The overall sentiment of users is **positive**.")
     else:
-        st.error("❌"The overall user sentiment is **negative**.")
+        st.error("❌ The overall user sentiment is **negative**.")
