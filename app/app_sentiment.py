@@ -3,48 +3,48 @@ import joblib
 import numpy as np
 
 # بارگذاری مدل
-model = joblib.load('app/xgb_sentiment_model.pkl')
+model = joblib.load('xgb_sentiment_model.pkl')
 
 st.set_page_config(page_title="App Review Sentiment Predictor", layout="centered")
 
 # عنوان
-st.title("📱 پیش‌بینی احساس کاربران نسبت به اپ‌ها")
+st.title("📱 Predicting user sentiment towards apps")
 
-st.markdown("با وارد کردن ویژگی‌های اپ، احساس کلی کاربران را پیش‌بینی کن!")
+st.markdown("Predict the overall sentiment of users by entering app features!")
 
 # ورودی‌ها
-size_mb = st.slider("حجم اپ (MB):", min_value=1.0, max_value=100.0, step=0.5)
-rating = st.slider("امتیاز کاربران:", min_value=1.0, max_value=5.0, step=0.1)
+size_mb = st.slider("App Size (MB):", min_value=1.0, max_value=100.0, step=0.5)
+rating = st.slider("User rating:", min_value=1.0, max_value=5.0, step=0.1)
 
 category_labels = {
-    0: "🎮 بازی‌ها",
-    1: "📚 آموزشی",
-    2: "💰 مالی",
-    3: "💬 اجتماعی",
-    4: "🛠 ابزارها",
-    5: "🧭 سفر و گردشگری"
+    0: "🎮 Games",
+    1: "📚 Educational",
+    2: "💰 Financial",
+    3: "💬 Social",
+    4: "🛠 Tools",
+    5: "🧭 Travel"
 }
 
 category_code = st.selectbox(
-    "دسته‌بندی اپ:",
+    "App Category:",
     options=list(category_labels.keys()),
     format_func=lambda x: category_labels[x]
 )
 
 type_label = st.radio(
-    "نوع اپ:",
-    options=["رایگان", "پولی"]
+    "App Type:",
+    options=["Free", "Paid"]
 )
 
 # تبدیل انتخاب کاربر به کد عددی
-type_code = 0 if type_label == "رایگان" else 1
+type_code = 0 if type_label == "Free" else 1
 
 # پیش‌بینی
-if st.button("پیش‌بینی احساس"):
+if st.button("Predict Sentiment"):
     features = np.array([[size_mb, rating, category_code, type_code]])
     prediction = model.predict(features)
 
     if prediction[0] == 1:
-        st.success("✅ احساس کلی کاربران **مثبت** است.")
+        st.success("✅ The overall sentiment of users is **positive**.")
     else:
-        st.error("❌ احساس کلی کاربران **منفی** است.")
+        st.error("❌"The overall user sentiment is **negative**.")
